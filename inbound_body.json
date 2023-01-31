@@ -1,0 +1,32 @@
+{
+  "service": "SFS",
+  "package": {
+    "reference": "reference-1234",
+    "dimensions": {
+      "size": "small"
+    },
+    "collect_task": {
+      "scheduling": {
+        "start_at": "",
+        "end_at": ""
+      },
+      "address": {
+        "street_name": "20 Rue Jean-Pierre Timbaud, 75011 Paris, Francia",
+        "doorbell_number": "",
+        "notes": ""
+      }
+    },
+    "deliver_task": {
+      "scheduling": {
+        "start_at": "",
+        "end_at": ""
+      },
+      "address": {
+        "street_name": "1 Av. Claude Vellefaux, 75010 Paris, Francia",
+        "doorbell_number": "",
+        "contact_phone": "666666666",
+        "notes": ""
+      }
+    }
+  }
+}

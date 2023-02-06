@@ -6,6 +6,9 @@ require 'hanami/api'
 require 'hanami/middleware/body_parser'
 use Hanami::Middleware::BodyParser, :json
 
+require 'uri'
+require 'net/http'
+
 class App < Hanami::API
   helpers do
     def map_body_to_outbound
@@ -27,6 +30,13 @@ class App < Hanami::API
     end
 
     def make_request(_body)
+      uri = URI('https://dummy-api.beta.stuart-apps.solutions/api/foo/bar')
+
+      Net::HTTP.start(uri.host, uri.port, use_ssl: true, open_timeout: 2, read_timeout: 2) do |http|
+        request = Net::HTTP::Get.new uri
+        http.request request
+      end
+
       {
         id: 100_432_273,
         status: 'in_progress',

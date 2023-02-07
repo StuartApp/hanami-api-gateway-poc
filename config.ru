@@ -80,6 +80,10 @@ class App < Hanami::API
     end
   end
 
+  get 'health' do
+    "Hey, I'm healthy!"
+  end
+
   post '/' do
     outbound_body = map_body_to_outbound
     response_body = make_request(outbound_body)

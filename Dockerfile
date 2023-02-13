@@ -16,4 +16,4 @@ RUN bundle install --jobs $(nproc) --retry 3
 COPY . $APP_HOME
 
 EXPOSE 3000
-CMD ["bundle", "exec", "rackup", "--host", "0.0.0.0", "--port", "3000"]
+CMD ["bundle", "exec", "puma", "-C", "./puma.rb"]

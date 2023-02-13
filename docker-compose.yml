@@ -2,7 +2,7 @@ version: "3"
 services:
   api:
     build: .
-    command: bundle exec rackup --host 0.0.0.0 --port 3000
+    command: bundle exec puma -C ./puma.rb
     ports:
       - "3000:3000"
     environment:

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 workers 4
-threads_count = 10
-threads threads_count, threads_count
-
-port ENV['PORT'] || 3000
+threads 4, 16
+preload_app!
+port ENV.fetch('PORT', 3000)

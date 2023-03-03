@@ -1,6 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    faraday (2.7.4)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
     hanami-api (0.3.0)
       hanami-router (~> 2.0)
     hanami-router (2.0.2)
@@ -14,9 +18,9 @@ GEM
       hansi (~> 0.2.0)
       mustermann (= 3.0.0)
     nio4r (2.5.8)
-    puma (6.1.0)
+    puma (6.1.1)
       nio4r (~> 2.0)
-    rack (2.2.6.2)
+    rack (2.2.6.3)
     ruby2_keywords (0.0.5)
 
 PLATFORMS
@@ -24,6 +28,7 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
+  faraday
   hanami-api (~> 0.3.0)
   puma
 
